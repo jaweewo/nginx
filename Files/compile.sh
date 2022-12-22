@@ -85,7 +85,7 @@ git clone https://github.com/SpiderLabs/ModSecurity-nginx
 wget http://nginx.org/download/nginx-1.22.1.tar.gz
 tar -xvzf nginx-1.22.1.tar.gz
 cd /usr/local/nginx-1.22.1
-./configure --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-http_ssl_module --with-http_dav_module
+./configure --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-http_ssl_module --add-module=../nginx-ntlm-module 
 make && make install
 echo "Starting nginx"
 /usr/local/nginx/sbin/nginx

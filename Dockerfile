@@ -2,6 +2,7 @@ FROM centos:7
 WORKDIR /root
 RUN mkdir -p /etc/nginx/conf.d /etc/nginx/ssl && yum install nano git wget epel-release zip unzip -y
 COPY Files/compile.sh /root/
+COPY Files/nginx-ntlm-module /usr/local/
 RUN cd /root && chmod +x compile.sh  && ./compile.sh
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
