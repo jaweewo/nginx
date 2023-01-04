@@ -91,7 +91,7 @@ cd /usr/local/nginx-1.22.1
         --http-proxy-temp-path=/var/cache/nginx/proxy_temp \
         --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp \
         --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp \
-        --http-scgi-temp-path=/var/cache/nginx/scgi_temp \
+        --http-scgi-temp-path=/var/cache/nginx/scgi_temp 
 make && make install && mkdir -p /var/cache/nginx
 echo "Starting nginx"
 /usr/local/nginx/sbin/nginx
